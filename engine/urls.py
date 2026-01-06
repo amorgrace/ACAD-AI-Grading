@@ -19,6 +19,8 @@ from django.urls import path, include
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.permissions import AllowAny
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -73,9 +75,15 @@ schema_view = get_schema_view(
     public=True,
     permission_classes=[AllowAny],
 )
-
+@api_view(['GET'])
+def root_info(request):
+    return Response({
+        "message": "Welcome to Mini Assessment Engine API! 📝",
+        "instructions": "Please visit /swagger/ to explore and test all endpoints."
+    })
 
 urlpatterns = [
+    path('', root_info, name='root-info'),
     path('admin/', admin.site.urls),
     path('core/', include("core.urls")),
     path('auth/', include("authenticator.urls")),
