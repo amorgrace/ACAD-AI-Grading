@@ -3,7 +3,7 @@
 A backend-driven **exam and assessment system** built with **Django Rest Framework**, designed to handle user registration, exam attempts, theory-based questions, and automatic grading using **text similarity algorithms**.
 
 This project is intentionally structured to be **test-friendly via Swagger** while following **real-world backend best practices**.
-TESTERS CAN EASILY ACCESS WITH THIS ENPOINT https://acad-ai-grading.onrender.com/swagger/
+TESTERS CAN EASILY ACCESS WITH THIS ENDPOINT https://acad-ai-grading.onrender.com/swagger/
 
 ---
 
